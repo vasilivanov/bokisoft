@@ -36,6 +36,9 @@ build/Release
 node_modules/
 jspm_packages/
 
+# Dependency lock
+package-lock.json
+
 # Typescript v1 declaration files
 typings/
 
@@ -62,3 +65,6 @@ typings/
 
 # Intellij project files
 .iml
+
+# Output directories
+dist/
