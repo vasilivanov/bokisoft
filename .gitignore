@@ -64,7 +64,7 @@ typings/
 .next
 
 # Intellij project files
-.iml
+*.iml
 
 # Output directories
 dist/
