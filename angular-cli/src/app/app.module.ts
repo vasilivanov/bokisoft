@@ -6,11 +6,13 @@ import { ClarityModule } from '@clr/angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { InfoCardComponent } from "./info-card/info-card.component";
 import { HttpClientModule } from "@angular/common/http";
+import { CustomTreeViewComponent } from './custom-tree-view/custom-tree-view.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    InfoCardComponent
+    InfoCardComponent,
+    CustomTreeViewComponent
   ],
   imports: [
     BrowserModule,
