@@ -55,7 +55,7 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "host": "10.23.8.104",
+            "host": "localhost",
             "browserTarget": "angular-cli:build"
           },
           "configurations": {
