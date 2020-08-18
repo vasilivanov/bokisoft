@@ -1,0 +1,45 @@
+<clr-stack-view>
+  <clr-stack-header>
+    Lazily loaded children
+    <button class="stack-action btn btn-sm btn-link" type="button">Reset</button>
+  </clr-stack-header>
+
+  <clr-stack-block
+    #lazyBlock
+    [clrSbExpandable]="true"
+    [clrSbExpanded]="true"
+    [clrStackViewLevel]="1"
+    [clrStackViewSetsize]="2"
+    [clrStackViewPosinset]="1"
+  >
+    <clr-stack-label>Label 1</clr-stack-label>
+    <clr-stack-content>Content 1</clr-stack-content>
+
+    <clr-stack-block class="no-label-stack-block">
+<!--      <clr-stack-label>Nested Label 1</clr-stack-label>-->
+      <clr-stack-content>
+        <app-custom-clr-controls></app-custom-clr-controls>
+      </clr-stack-content>
+    </clr-stack-block>
+    <clr-stack-block>
+      <clr-stack-label>Nested Label 2</clr-stack-label>
+      <clr-stack-content>
+        Nested Content 2
+      </clr-stack-content>
+    </clr-stack-block>
+    <clr-stack-block>
+      <clr-stack-label>Nested Label 3</clr-stack-label>
+      <clr-stack-content>Nested Content 3</clr-stack-content>
+    </clr-stack-block>
+  </clr-stack-block>
+
+  <clr-stack-block [clrStackViewLevel]="1" [clrStackViewSetsize]="2" [clrStackViewPosinset]="2">
+    <clr-stack-label>Label 2</clr-stack-label>
+    <clr-stack-content>Content 2</clr-stack-content>
+    <clr-stack-block class="no-label-stack-block">
+      <clr-stack-content>
+<!--        <app-customer></app-customer>-->
+      </clr-stack-content>
+    </clr-stack-block>
+  </clr-stack-block>
+</clr-stack-view>

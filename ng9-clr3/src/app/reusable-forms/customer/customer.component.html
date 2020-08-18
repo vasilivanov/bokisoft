@@ -1,0 +1,76 @@
+<form clrForm (ngSubmit)="save()" [formGroup]="customerForm">
+  <span class="clr-sr-only">Tabbing through form inputs will trigger validation messages to be read aloud.</span>
+  <clr-input-container>
+    <label>First name</label>
+    <input clrInput type="text" formControlName="firstName"/>
+    <clr-control-error>We need your first name for legal compliance.</clr-control-error>
+  </clr-input-container>
+  <clr-input-container>
+    <label>Last name</label>
+    <input clrInput type="text" formControlName="lastName" />
+  </clr-input-container>
+  <clr-input-container>
+    <label>Email</label>
+    <input clrInput type="text" formControlName="email" />
+    <clr-control-error *ngIf="customerForm.getError('required', 'email')">Specify a valid email.</clr-control-error>
+    <clr-control-error *ngIf="customerForm.getError('email', 'email')">Invalid email specified.</clr-control-error>
+  </clr-input-container>
+  <clr-input-container>
+    <label>Phone</label>
+    <input clrInput type="text" formControlName="phone" />
+    <clr-control-error>You must specify a phone.</clr-control-error>
+  </clr-input-container>
+  <clr-control-container>
+    <label>Send catalog</label>
+    <div style="display: flex;">
+      <input type="checkbox" clrCheckbox formControlName="sendCatalog"/>
+    </div>
+  </clr-control-container>
+  <clr-radio-container clrInline>
+    <label>Notification</label>
+    <clr-radio-wrapper>
+      <input type="radio" clrRadio formControlName="notification" value="email" />
+      <label>Email</label>
+    </clr-radio-wrapper>
+    <clr-radio-wrapper>
+      <input type="radio" clrRadio formControlName="notification" value="text" />
+      <label>Text</label>
+    </clr-radio-wrapper>
+    <clr-radio-wrapper>
+      <input type="radio" clrRadio formControlName="notification" value="none" />
+      <label>None</label>
+    </clr-radio-wrapper>
+    <clr-control-helper>Choose how you want to be notified</clr-control-helper>
+    <clr-control-error>This field is required!</clr-control-error>
+  </clr-radio-container>
+
+  <button type="button" (click)="load()" class="btn" aria-label="load">
+    <clr-icon shape="employee"></clr-icon>
+    Load
+  </button>
+  <button type="submit" class="btn btn-primary" aria-label="done">
+    <clr-icon shape="check"></clr-icon>
+    Submit
+  </button>
+</form>
+
+<table class="table table-vertical">
+  <tbody>
+    <tr>
+      <th>Touched</th>
+      <td>{{customerForm.touched}}</td>
+    </tr>
+    <tr>
+      <th>Dirty</th>
+      <td>{{customerForm.dirty}}</td>
+    </tr>
+    <tr>
+      <th>Valid</th>
+      <td>{{customerForm.valid}}</td>
+    </tr>
+    <tr>
+      <th>Value</th>
+      <td>{{customerForm.value | json}}</td>
+    </tr>
+  </tbody>
+</table>

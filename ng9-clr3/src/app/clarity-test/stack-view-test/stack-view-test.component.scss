@@ -1,0 +1,11 @@
+:host {
+  .no-label-stack-block {
+    ::ng-deep .stack-block-content {
+      padding-left: 0;
+    }
+
+    ::ng-deep .stack-view-key {
+      display: none;
+    }
+  }
+}

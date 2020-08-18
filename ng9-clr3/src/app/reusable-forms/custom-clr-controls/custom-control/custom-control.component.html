@@ -1,0 +1,10 @@
+<div class="clr-row" [formGroup]="form">
+  <input id="custom-text" class="clr-input" placeholder="Input control" formControlName="text"/>
+
+  <div class="clr-select-wrapper">
+    <select class="clr-select" name="options" formControlName="select">
+      <option *ngFor="let unit of units" [value]="unit.id">{{unit.name}}</option>
+      <option value="custom">Custom</option>
+    </select>
+  </div>
+</div>

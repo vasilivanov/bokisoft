@@ -1,0 +1,37 @@
+<!-- Reactive Example -->
+<form class="clr-form clr-form-horizontal" (ngSubmit)="save()"  [formGroup]="reactiveModel">
+<!--  <clr-control-container>-->
+<!--    <label>Input label</label>-->
+<!--    <input clrControl placeholder="Basic text" formControlName="container" />-->
+<!--    <clr-control-helper>Helper text</clr-control-helper>-->
+<!--  </clr-control-container>-->
+
+    <div class="clr-form-control clr-row">
+      <label for="custom-control" class="clr-control-label">Required</label>
+      <div class="clr-control-container">
+        <app-custom-control id="custom-control" formControlName="custom"></app-custom-control>
+      </div>
+    </div>
+
+<!--  <clr-control-container>-->
+<!--    <label>Ng Select 2</label>-->
+<!--    <ng-select clrControl [multiple]="true" formControlName="cars">-->
+<!--      <ng-option *ngFor="let car of cars" [value]="car.id">{{car.name}}</ng-option>-->
+<!--      <ng-option [value]="'custom'">Custom</ng-option>-->
+<!--    </ng-select>-->
+<!--    <clr-control-helper>Helper text</clr-control-helper>-->
+<!--    <clr-control-error *clrIfError="'required'">This is a required field</clr-control-error>-->
+<!--  </clr-control-container>-->
+
+<!--  <clr-select-container>-->
+<!--    <label>I've got some options</label>-->
+<!--    <select clrSelect name="options" formControlName="cars">-->
+<!--      <option *ngFor="let car of cars" [value]="car.id">{{car.name}}</option>-->
+<!--      <option value="custom">Custom</option>-->
+<!--    </select>-->
+<!--    <clr-control-helper>Helper text</clr-control-helper>-->
+<!--    <clr-control-error>This field is required!</clr-control-error>-->
+<!--  </clr-select-container>-->
+
+  <button class="btn btn-primary" type="submit">Submit</button>
+</form>
