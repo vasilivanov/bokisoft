@@ -1,0 +1,15 @@
+<pre>
+<strong>Person</strong>
+  Object prototype: {{person.constructor.prototype | json}}
+  Own property names: {{getOwnPropertyNames(person.constructor.prototype)}}
+  Talk: {{person.talk()}}
+  {{instanceOfPerson(person)}}
+  {{instanceOfTeacher(person)}}
+
+<strong>Teacher</strong>
+  Object prototype: {{teacher.constructor.prototype | json}}
+  Own property names: {{getOwnPropertyNames(teacher.constructor.prototype)}}
+  Talk: {{teacher.talk()}}
+  {{instanceOfPerson(teacher)}}
+  {{instanceOfTeacher(teacher)}}
+</pre>

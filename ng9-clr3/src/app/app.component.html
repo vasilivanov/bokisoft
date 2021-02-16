@@ -10,7 +10,14 @@
     <app-side-nav></app-side-nav>
     <div class="content-area">
       <h1>Hello, World!</h1>
-      <app-stack-view-test></app-stack-view-test>
+        <app-testjs></app-testjs>
+        <app-fa-input [icon]="'calendar'"></app-fa-input>
+        <br>
+        <app-fa-input-two [icon]="'home'">
+          <input inputRef type="email" placeholder="Email">
+        </app-fa-input-two>
+        <br>
+      </div>
     </div>
-  </div>
+    <app-clarity-test></app-clarity-test>
 </clr-main-container>

@@ -8,10 +8,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {AppLayoutModule} from "./app-layout/app-layout.module";
 import {ReusableFormsModule} from "./reusable-forms/reusable-forms.module";
 import { ClarityTestModule } from "./clarity-test/clarity-test.module";
+import { ProjectionModule } from './projection/projection.module';
+import { TestjsComponent } from './testjs/testjs.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TestjsComponent
   ],
   imports: [
     BrowserModule,
@@ -20,7 +23,8 @@ import { ClarityTestModule } from "./clarity-test/clarity-test.module";
     BrowserAnimationsModule,
     AppLayoutModule,
     ReusableFormsModule,
-    ClarityTestModule
+    ClarityTestModule,
+    ProjectionModule
   ],
   providers: [],
   bootstrap: [AppComponent]
