@@ -1,0 +1,30 @@
+<clr-main-container>
+  <clr-header>
+    Test App with Angular 9 and Clarity 3
+    <div class="header-nav" [clr-nav-level]="1">
+      ...
+    </div>
+    ...
+  </clr-header>
+  <div class="content-container">
+    <ng-content select="app-side-nav"></ng-content>
+    <!--    <clr-vertical-nav clrVerticalNavCollapsible="true">-->
+    <!--      <a clrVerticalNavLink-->
+    <!--         routerLink="/testjs"-->
+    <!--         routerLinkActive="active">-->
+    <!--        TestJS-->
+    <!--      </a>-->
+    <!--    </clr-vertical-nav>-->
+    <div class="content-area">
+      <router-outlet></router-outlet>
+      <!--      <h1>Hello, World!</h1>-->
+      <!--      <app-testjs></app-testjs>-->
+      <!--      <app-fa-input [icon]="'calendar'"></app-fa-input>-->
+      <!--      <br>-->
+      <!--      <app-fa-input-two [icon]="'home'">-->
+      <!--        <input inputRef type="email" placeholder="Email">-->
+      <!--      </app-fa-input-two>-->
+      <!--      <br>-->
+    </div>
+  </div>
+</clr-main-container>

@@ -4,18 +4,22 @@ import { SideNavComponent } from './side-nav/side-nav.component';
 import {ClarityModule} from "@clr/angular";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {BrowserModule} from "@angular/platform-browser";
+import { MainLayoutComponent } from './main-layout/main-layout.component';
+import { RouterModule } from '@angular/router';
 
 
 
 @NgModule({
-  declarations: [SideNavComponent],
+  declarations: [SideNavComponent, MainLayoutComponent],
   exports: [
-    SideNavComponent
+    SideNavComponent,
+    MainLayoutComponent
   ],
   imports: [
     BrowserModule,
     CommonModule,
     ClarityModule,
+    RouterModule,
     BrowserAnimationsModule,
   ]
 })

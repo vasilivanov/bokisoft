@@ -10,6 +10,7 @@ import {ReusableFormsModule} from "./reusable-forms/reusable-forms.module";
 import { ClarityTestModule } from "./clarity-test/clarity-test.module";
 import { ProjectionModule } from './projection/projection.module';
 import { TestjsComponent } from './testjs/testjs.component';
+import { MainLayoutComponent } from './app-layout/main-layout/main-layout.component';
 
 @NgModule({
   declarations: [

@@ -1,19 +1,30 @@
 <ng-container>
   <clr-vertical-nav clrVerticalNavCollapsible="true">
     <clr-vertical-nav-group
+      clrVerticalNavGroupExpanded="true"
       routerLinkActive="active">
       <clr-icon shape="user" clrVerticalNavIcon></clr-icon>
-      Normal
+      Examples
       <clr-vertical-nav-group-children>
         <a clrVerticalNavLink
-           routerLink="./normal/pidgey"
+           routerLink="/testjs"
            routerLinkActive="active">
-          Pidgey
+          TestJS
         </a>
         <a clrVerticalNavLink
-           routerLink="./normal/snorlax"
+           routerLink="/reusable-forms"
            routerLinkActive="active">
-          Snorlax
+          Reusable Forms
+        </a>
+        <a clrVerticalNavLink
+           routerLink="/projection"
+           routerLinkActive="active">
+          Projection
+        </a>
+        <a clrVerticalNavLink
+           routerLink="/clarity-test"
+           routerLinkActive="active">
+          Clarity Test
         </a>
       </clr-vertical-nav-group-children>
     </clr-vertical-nav-group>
