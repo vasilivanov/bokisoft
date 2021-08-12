@@ -5,6 +5,7 @@ import { ClarityModule } from "@clr/angular";
 import { ReusableFormsModule } from "../reusable-forms/reusable-forms.module";
 import { CustomAccordionPanelComponent } from './custom-accordion-panel/custom-accordion-panel.component';
 import { ClarityTestComponent } from './clarity-test/clarity-test.component';
+import { PipesModule } from '../pipes/pipes.module';
 
 
 
@@ -16,7 +17,8 @@ import { ClarityTestComponent } from './clarity-test/clarity-test.component';
    imports: [
       CommonModule,
       ClarityModule,
-      ReusableFormsModule
+      ReusableFormsModule,
+      PipesModule
    ]
 })
 export class ClarityTestModule { }

@@ -1,4 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Injectable, OnInit } from '@angular/core';
+
+@Injectable()
+export class SideNavService {
+
+}
 
 @Component({
   selector: 'app-side-nav',
@@ -12,3 +17,5 @@ export class SideNavComponent implements OnInit {
   ngOnInit(): void {
   }
 }
+
+

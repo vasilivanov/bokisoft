@@ -1,9 +1,23 @@
-import { Component, EventEmitter, HostBinding, Input, OnInit, Output } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  HostBinding,
+  Injectable,
+  Input,
+  OnInit,
+  Output
+} from '@angular/core';
+
+@Injectable()
+export class FaInputService {
+
+}
 
 @Component({
   selector: 'app-fa-input',
   templateUrl: './fa-input.component.html',
-  styleUrls: ['./fa-input.component.scss']
+  styleUrls: ['./fa-input.component.scss'],
+  providers: [FaInputService]
 })
 export class FaInputComponent implements OnInit {
 

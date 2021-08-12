@@ -8,6 +8,7 @@ import {
   Output
 } from '@angular/core';
 import { InputRefDirective } from './input-ref.directive';
+import { FaInputService } from '../fa-input/fa-input.component';
 
 @Component({
   selector: 'app-fa-input-two',
@@ -17,7 +18,7 @@ import { InputRefDirective } from './input-ref.directive';
 export class FaInputTwoComponent implements OnInit {
 
 
-  constructor() { }
+  constructor(private faInputService: FaInputService) { }
 
   @Input() icon: string = 'calendar';
   @Output() value = new EventEmitter<string>();

@@ -6,6 +6,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {BrowserModule} from "@angular/platform-browser";
 import { MainLayoutComponent } from './main-layout/main-layout.component';
 import { RouterModule } from '@angular/router';
+import { ProjectionModule } from '../projection/projection.module';
 
 
 
@@ -21,6 +22,7 @@ import { RouterModule } from '@angular/router';
     ClarityModule,
     RouterModule,
     BrowserAnimationsModule,
+    ProjectionModule
   ]
 })
 export class AppLayoutModule { }

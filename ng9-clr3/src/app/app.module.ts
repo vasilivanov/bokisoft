@@ -11,6 +11,7 @@ import { ClarityTestModule } from "./clarity-test/clarity-test.module";
 import { ProjectionModule } from './projection/projection.module';
 import { TestjsComponent } from './testjs/testjs.component';
 import { MainLayoutComponent } from './app-layout/main-layout/main-layout.component';
+import { PipesModule } from './pipes/pipes.module';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { MainLayoutComponent } from './app-layout/main-layout/main-layout.compon
     AppLayoutModule,
     ReusableFormsModule,
     ClarityTestModule,
-    ProjectionModule
+    ProjectionModule,
+    PipesModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,6 +1,6 @@
 <clr-accordion>
   <clr-accordion-panel>
-    <clr-accordion-title>Item First</clr-accordion-title>
+    <clr-accordion-title>{{itemToFind | json}}</clr-accordion-title>
     <clr-accordion-content *clrIfExpanded>Content2</clr-accordion-content>
   </clr-accordion-panel>
 <!--  <app-custom-accordion-panel></app-custom-accordion-panel>-->
@@ -15,3 +15,5 @@
     <clr-accordion-content *clrIfExpanded>Content 3</clr-accordion-content>
   </clr-accordion-panel>
 </clr-accordion>
+
+<h1>{{5*1024*1024 | megabytes }}</h1>
