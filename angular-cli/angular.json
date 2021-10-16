@@ -51,7 +51,9 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
             "host": "localhost",
-            "browserTarget": "angular-cli:build"
+            "browserTarget": "angular-cli:build",
+            "sslKey": "../../../../../var/lib/vmware/vsphere-client/vsphere-webclient-key.txt",
+            "sslCert": "../../../../../var/lib/vmware/vsphere-client/vsphere-webclient-cert.txt"
           },
           "configurations": {
             "production": {
