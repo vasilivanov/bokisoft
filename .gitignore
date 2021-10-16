@@ -68,3 +68,4 @@ typings/
 
 # Output directories
 dist/
+target/
