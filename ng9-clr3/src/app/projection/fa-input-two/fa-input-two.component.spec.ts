@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { FaInputTwoComponent } from './fa-input-two.component';
 
@@ -6,7 +6,7 @@ describe('FaInputTwoComponent', () => {
   let component: FaInputTwoComponent;
   let fixture: ComponentFixture<FaInputTwoComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ FaInputTwoComponent ]
     })
