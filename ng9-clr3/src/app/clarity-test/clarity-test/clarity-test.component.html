@@ -17,3 +17,38 @@
 </clr-accordion>
 
 <h1>{{5*1024*1024 | megabytes }}</h1>
+
+<button class="btn btn-primary" (click)="validate()">Validate</button>
+
+<form [formGroup]="positionForm">
+  <clr-radio-container>
+    <label>Helper/Error Radio</label>
+    <clr-radio-wrapper>
+      <input type="radio" clrRadio formControlName="position" value="first"/>
+      <label>First</label>
+    </clr-radio-wrapper>
+    <clr-radio-wrapper>
+      <input type="radio" clrRadio formControlName="position" value="second" />
+      <label>Second</label>
+    </clr-radio-wrapper>
+    <clr-radio-wrapper>
+      <input type="radio" clrRadio formControlName="position" value="third" />
+      <label>Third</label>
+    </clr-radio-wrapper>
+    <clr-radio-wrapper>
+      <input type="radio" clrRadio formControlName="position" value="forth" />
+      <label>Forth</label>
+    </clr-radio-wrapper>
+    <clr-control-helper>Helper text</clr-control-helper>
+    <clr-control-error>Validation failed</clr-control-error>
+  </clr-radio-container>
+</form>
+
+<div style="width: 500px; height: 500px; display: flex" class="border-red clr-flex-column">
+  <div class="border-blue clr-row  clr-justify-content-end">
+    <div class="border-red">111</div><div class="border-red">222</div>
+  </div>
+  <div class="border-green clr-row  clr-flex-fill">
+    <div class="">EEEEEEEEK</div>
+  </div>
+</div>
