@@ -7,11 +7,12 @@ import { CustomAccordionPanelComponent } from './custom-accordion-panel/custom-a
 import { ClarityTestComponent } from './clarity-test/clarity-test.component';
 import { PipesModule } from '../pipes/pipes.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { UserSettingsFormComponent } from './user-settings-form/user-settings-form.component';
 
 
 
 @NgModule({
-   declarations: [StackViewTestComponent, CustomAccordionPanelComponent, ClarityTestComponent],
+   declarations: [StackViewTestComponent, CustomAccordionPanelComponent, ClarityTestComponent, UserSettingsFormComponent],
    exports: [
       ClarityTestComponent,
    ],

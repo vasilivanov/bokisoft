@@ -1,0 +1,82 @@
+<div [formGroup]="form">
+  <div class="clr-form clr-form-horizontal">
+
+    <clr-input-container>
+      <label>Computer name</label>
+      <input clrInput formControlName="computerName">
+    </clr-input-container>
+  </div>
+  <h2>Network settings</h2>
+  <clr-accordion #accordion class="mt-1" formArrayName="nics">
+    <clr-accordion-panel *ngFor="let nic of nicAdapters; let i = index; trackBy: panelId"
+             (clrAccordionPanelOpenChange)="onPanelOpen($event)">
+      <clr-accordion-title>Nic {{i}}</clr-accordion-title>
+      <clr-accordion-description>
+        <span *ngIf="!accordion.panels?.get(i).panelOpen && invalidNicSettingCount[nic.id]">
+          <span class="badge badge-danger">{{invalidNicSettingCount[nic.id]}}</span>Errors
+        </span>
+      </clr-accordion-description>
+      <clr-accordion-content>
+        <div [formGroupName]="i" class="clr-form clr-form-horizontal">
+          <clr-input-container>
+            <label>IPV4 Address</label>
+            <input clrInput formControlName="ipV4Address">
+            <clr-control-error *clrIfError="'required'">Required field</clr-control-error>
+            <clr-control-error *clrIfError="'errorValidator'">Please, sepcify valid IPV4 address</clr-control-error>
+          </clr-input-container>
+
+          <clr-input-container>
+            <label>Network mask</label>
+            <input clrInput formControlName="netMask">
+            <clr-control-error *ngIf="form.get(['nics', i, 'netMask']).errors?.required">Required field</clr-control-error>
+            <clr-control-error *ngIf="form.get(['nics', i, 'netMask']).errors?.errorValidator">Please, sepcify valid netmask</clr-control-error>
+          </clr-input-container>
+
+          <clr-input-container>
+            <label>IPv4 default gateway (Optional)</label>
+            <input clrInput formControlName="gateway">
+          </clr-input-container>
+
+          <div class="clr-form-control">
+            <label for="ipv6Gateway-{{nic.id}}" class="clr-control-label">IPv6 gateways (Optional)</label>
+            <fieldset>
+              <legend class="clr-sr-only">
+                IPv6 gateways (Optional)
+              </legend>
+              <div class="ipv6-add-gateway">
+                <div class="clr-control-container ipv6-add-gateway-input-container" [class.clr-error]="ipv6GatewayControl.invalid">
+                  <div class="clr-input-wrapper">
+                    <input id="ipv6Gateway-{{nic.id}}" type="text" [formControl]="ipv6GatewayControl" placeholder="Gateway" class="clr-input">
+                    <cds-icon *ngIf="ipv6GatewayControl.invalid" class="clr-validate-icon " shape="exclamation-circle"></cds-icon>
+                  </div>
+                  <span class="clr-subtext clr-error" *ngIf="ipv6GatewayControl.invalid">Invalid gateway</span>
+                </div>
+                <div class="clr-control-container">
+                  <button type="button" class="btn btn-secondary btn-sm" >Add</button>
+                </div>
+              </div>
+              <div>
+                <clr-datagrid>
+                  <clr-dg-placeholder>No items to display</clr-dg-placeholder>
+                  <clr-dg-row *clrDgItems="let gateway of gatewayList" [clrDgItem]="gateway">
+                    <clr-dg-action-overflow>
+                      <button class="bnt btn-link" (click)="onDelete(gateway)">
+                        Delete
+                      </button>
+                    </clr-dg-action-overflow>
+                    <clr-dg-cell>
+                      {{ gateway }}
+                    </clr-dg-cell>
+                  </clr-dg-row>
+                </clr-datagrid>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+
+      </clr-accordion-content>
+    </clr-accordion-panel>
+  </clr-accordion>
+</div>
+
+

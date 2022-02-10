@@ -1,0 +1,28 @@
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.mb-0 {
+  margin-bottom: 0px;
+}
+
+.ml-1 {
+  margin-left: 1rem;
+}
+
+.pr-2 {
+  padding-right: 2rem;
+}
+
+
+.ipv6-add-gateway {
+  display: flex;
+  flex-direction: row;
+  flex: 1 0 auto;
+}
+.ipv6-add-gateway-input-container {
+  min-width: 15rem;
+  input {
+    min-width: calc(100% - 1.2rem);
+  }
+}

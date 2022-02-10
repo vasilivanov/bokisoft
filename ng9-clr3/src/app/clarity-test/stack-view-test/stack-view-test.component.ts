@@ -10,6 +10,7 @@ export class StackViewTestComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log('StackViewTestComponent initialized');
   }
 
 }
