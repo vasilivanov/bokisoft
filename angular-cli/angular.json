@@ -52,9 +52,7 @@
           "options": {
             "host": "localhost",
             "browserTarget": "angular-cli:build",
-            "sslKey": "../../../../../var/lib/vmware/vsphere-client/vsphere-webclient-key.txt",
-            "sslCert": "../../../../../var/lib/vmware/vsphere-client/vsphere-webclient-cert.txt",
-            "ssl": true
+            "ssl": false
           },
           "configurations": {
             "production": {
