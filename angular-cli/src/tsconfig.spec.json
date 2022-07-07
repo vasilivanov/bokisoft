@@ -12,6 +12,7 @@
     "polyfills.ts"
   ],
   "include": [
+    "src/**/*.ts",
     "**/*.spec.ts",
     "**/*.d.ts"
   ]
