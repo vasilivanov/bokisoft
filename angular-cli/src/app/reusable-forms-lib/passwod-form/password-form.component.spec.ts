@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { PasswordFormComponent } from './password-form.component';
 
@@ -8,6 +9,7 @@ describe('PasswordFormComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [ReactiveFormsModule],
       declarations: [ PasswordFormComponent ]
     })
     .compileComponents();
