@@ -38,7 +38,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "aot": true,
               "extractLicenses": true,
@@ -50,11 +49,11 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "host": "localhost",
+            "host": "0.0.0.0",
             "browserTarget": "angular-cli:build",
-            "sslKey": "../../../../../var/lib/vmware/vsphere-client/vsphere-webclient-key.txt",
-            "sslCert": "../../../../../var/lib/vmware/vsphere-client/vsphere-webclient-cert.txt",
-            "ssl": true
+            "ssl": false,
+            "open": true
+
           },
           "configurations": {
             "production": {
@@ -126,5 +125,7 @@
       }
     }
   },
-  "defaultProject": "angular-cli"
+  "cli": {
+    "analytics": false
+  }
 }

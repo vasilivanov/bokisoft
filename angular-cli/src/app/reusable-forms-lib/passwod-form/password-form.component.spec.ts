@@ -1,20 +1,22 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ReactiveFormsModule } from '@angular/forms';
 
-import { PasswodFormComponentComponent } from './passwod-form-component.component';
+import { PasswordFormComponent } from './password-form.component';
 
-describe('PasswodFormComponentComponent', () => {
-  let component: PasswodFormComponentComponent;
-  let fixture: ComponentFixture<PasswodFormComponentComponent>;
+describe('PasswordFormComponent', () => {
+  let component: PasswordFormComponent;
+  let fixture: ComponentFixture<PasswordFormComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PasswodFormComponentComponent ]
+      imports: [ReactiveFormsModule],
+      declarations: [ PasswordFormComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PasswodFormComponentComponent);
+    fixture = TestBed.createComponent(PasswordFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
