@@ -9,6 +9,8 @@ import (
 
 func main() {
 	fmt.Printf(greetings.Greet("Penchev1"))
+	fmt.Printf(greetings.Greet("Penchev2"))
+	fmt.Printf(greetings.Greet("Penchev3"))
 	//fmt.Printf("%v", sum.Sum(5))
 
 	fmt.Print("Go runs on ")
